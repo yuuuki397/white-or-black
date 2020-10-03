@@ -167,7 +167,7 @@ function gameSceneStart() {
     let array = JSON.parse(localStorage.getItem(HIGH_SCORE_KEY));
     for (let i = 0; i < highScore.length; i++) {
       // 数字なら読み込んだ値を入れ、数字以外なら0を入れる
-      if (typeof(array[i]) == "number") {
+      if (array !== null && typeof(array[i]) == "number") {
         highScore[i] = array[i];
       } else {
         highScore[i] = 0;
